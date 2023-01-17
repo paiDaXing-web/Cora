@@ -21,6 +21,7 @@ const LogsContainer = ({
         if (log.data?.pop() === editorId) {
           // Problem completion determined by logs. How else?
           let lastItem = log.data?.slice(-1)[0];
+          console.log(log);
           if (lastItem === 'Problem solved') {
             onSuccess?.(count => count + 1);
           }
@@ -33,7 +34,14 @@ const LogsContainer = ({
           ) {
             onFailure?.();
           }
-          setLogs((logs: any) => [...logs, log]);
+          setLogs((logs: any) => [
+            {
+              method: 'command',
+              data: ['输出结果'],
+            },
+            ...logs,
+            log,
+          ]);
         }
       },
       false
@@ -48,13 +56,13 @@ const LogsContainer = ({
     <div className="log" style={{ backgroundColor: '#242424' }}>
       <Console
         logs={logs as any[]}
-        styles={{ BASE_FONT_SIZE: 13 }}
+        styles={{ BASE_FONT_SIZE: 14 }}
         variant="dark"
       />
     </div>
   );
 };
 
-type logsType = typeof LogsContainer
-export {logsType}
+type logsType = typeof LogsContainer;
+export { logsType };
 export default LogsContainer;

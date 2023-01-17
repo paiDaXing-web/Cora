@@ -23,7 +23,7 @@ import {
   setRunnerModel,
 } from './mountFunctions';
 import runFile, { runTestFile } from './utils/runFile';
-import Console, {logsType} from "./consoleLog"
+import Console, { logsType } from './consoleLog';
 
 type MonacoEditorProps = {
   id: string;
@@ -101,20 +101,9 @@ function App({
         <TopBar editorId={id} modelsInfo={modelsInfo}></TopBar>
         <div style={{ height }}>
           <Editor
-            options={{
-              scrollBeyondLastLine: false,
-              minimap: {
-                enabled: false,
-              },
-              overviewRulerLanes: 0,
-              scrollbar: {
-                alwaysConsumeMouseWheel: false,
-              },
-              wordWrap: 'on',
-              wrappingStrategy: 'advanced',
-            }}
             editorDidMount={handleEditorDidMount}
             language="typescript"
+            // defaultValue="// some comment"
             loading={
               <div
                 style={{
