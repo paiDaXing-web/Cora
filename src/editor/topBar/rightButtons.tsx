@@ -12,6 +12,7 @@ import RestoreIcon from '@material-ui/icons/Restore';
 import CodeIcon from '@material-ui/icons/Code';
 import { useConsoleMessages } from '../editorContext';
 import { setModelsFromInfo } from '../mountFunctions';
+import "./index.css"
 
 type PlayButtonType = { editorId: string; modelsInfo: modelsInfoType };
 export default function PlayButton({ editorId, modelsInfo }: PlayButtonType) {
@@ -47,7 +48,8 @@ export default function PlayButton({ editorId, modelsInfo }: PlayButtonType) {
         }
         style={{ color: '#09ad11', marginRight: '4px' }}
       />
-      <PlayArrowIcon
+      <button
+      className='run-btn'
         onClick={() => {
           runFile(
             editorId,

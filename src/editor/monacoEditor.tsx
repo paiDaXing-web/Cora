@@ -24,6 +24,7 @@ import {
 } from './mountFunctions';
 import runFile, { runTestFile } from './utils/runFile';
 import Console, { logsType } from './consoleLog';
+import { Button } from './components/Button';
 
 type MonacoEditorProps = {
   id: string;
@@ -55,7 +56,7 @@ function App({
     editor: editor.IStandaloneCodeEditor
   ) => {
     monaco.init().then(monaco => {
-      setDynamicHeight(editor, setHeight);
+      // setDynamicHeight(editor, setHeight);
       setTheme(monaco);
       setMonacoInstance(monaco);
       editorCallbackRef(editor);
@@ -99,10 +100,11 @@ function App({
     <>
       <div>
         <TopBar editorId={id} modelsInfo={modelsInfo}></TopBar>
-        <div style={{ height }}>
+        <div style={{ height:"auto" }}>
           <Editor
             editorDidMount={handleEditorDidMount}
             language="typescript"
+            height="80vh"
             // defaultValue="// some comment"
             loading={
               <div
@@ -112,6 +114,8 @@ function App({
                   paddingBottom: '10px',
                   width: '100%',
                   textAlign: 'center',
+                  lineHeight:'80vh',
+                  height:'100%'
                 }}
               >
                 Loading...
@@ -119,7 +123,7 @@ function App({
             }
           />
         </div>
-        <div style={{ backgroundColor: '#242424' }}>
+        <div style={{ backgroundColor: '#242424' ,height:"19vh"}}>
           {Console && (
             <Console
               onSuccess={onSuccess}
@@ -128,6 +132,9 @@ function App({
             ></Console>
           )}
         </div>
+        <Button text='运行' onClick={()=>{
+          console.log(1)
+        }}>sss</Button>
       </div>
     </>
   );

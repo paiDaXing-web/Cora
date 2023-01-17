@@ -1,0 +1,23 @@
+.btn{
+    border: none;
+    border-radius: 3px;
+    line-height: 20px;
+    outline: none;
+    user-select: none;
+    text-decoration: none;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition-property: color, box-shadow, background-color, opacity;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: inset 0px 0px 0px 1px rgba( 45,181,93, 1);
+    background-color: transparent;
+    color: rgba( 45,181,93, 1);
+    font-size: 14px;
+    padding: 6px 8px;
+}
