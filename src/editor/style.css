@@ -1,0 +1,115 @@
+.editor-bottom{
+    height:55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 1;
+    font-size: 13px;
+    background: rgb(250, 250, 250);
+    border-top: 1px solid rgba(240,240,240,1);
+}
+.console{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 0;
+    color: rgba(var(--grey-8-rgb),1);
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s;
+    -o-transition: 0.3s all;
+    transition: all 0.3s;
+}
+.css-1lc17o4-icon{
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentcolor;
+    overflow: hidden;
+}
+.console-box{
+    position: absolute;
+    bottom: calc(10vh - 45px);
+    background-color: #fff;
+    width:100%;
+    height: 200px;
+    transition: height 0.1s ease-in;
+    overflow-y:scroll
+}
+.console-box-hidden{
+    overflow: hidden;
+    position: absolute;
+    bottom: calc(10vh - 45px);
+    width:100%;
+    background-color: #fff;
+    height: 0px;
+    transition: height 0.5s ease-out
+}
+.editor-box{
+    position: relative;
+}
+.log{
+    overflow-y:scroll
+}
+.console-box-tab{
+    width: 100%;
+    height: 36px;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    background-color: rgba(240,240,240,1);
+}
+.console-box-tab-test{
+    overflow: hidden;
+    text-overflow: unset;
+    white-space: pre;
+    position: relative;
+    flex: 0 1 auto;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    color: rgba(140,140,140, 1);
+    cursor: pointer;
+    z-index: 1;
+    height: 36px;
+    font-size: 12px;
+    max-width: 160px;
+}
+.css-l4jzv2-TabHeaderRow {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    color: inherit;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    width: 100%;
+    line-height: 14px;
+    padding: 11px 10px;
+}
+.css-1lc17o4-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentcolor;
+    overflow: hidden; padding: 11px 10px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

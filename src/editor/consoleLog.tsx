@@ -1,15 +1,17 @@
 import React, { useEffect, Dispatch, SetStateAction } from 'react';
 import { Console, Hook, Unhook } from 'console-feed';
 import { useConsoleMessages } from './editorContext';
-
+import './style.css';
 const LogsContainer = ({
   editorId,
   onSuccess,
   onFailure,
+  logVisible,
 }: {
   editorId: string;
   onSuccess?: Dispatch<SetStateAction<number>>;
   onFailure?: Function;
+  logVisible?: boolean;
 }) => {
   const [logs, setLogs] = useConsoleMessages();
 
@@ -51,7 +53,7 @@ const LogsContainer = ({
     //dependencies prevent stale
   }, [editorId, onFailure, onSuccess, setLogs]);
 
-  return (
+  return logVisible ? (
     <div className="log" style={{ backgroundColor: '#242424' }}>
       <Console
         logs={logs as any[]}
@@ -59,6 +61,8 @@ const LogsContainer = ({
         variant="dark"
       />
     </div>
+  ) : (
+    <></>
   );
 };
 

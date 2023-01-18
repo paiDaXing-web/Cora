@@ -25,6 +25,8 @@ import {
 import runFile, { runTestFile } from './utils/runFile';
 import Console, { logsType } from './consoleLog';
 import { Button } from './components/Button';
+import './style.css';
+import { ConsoleTab } from './components/ConsoleTab';
 
 type MonacoEditorProps = {
   id: string;
@@ -99,13 +101,13 @@ function App({
 
   return (
     <>
-      <div>
+      <div className="editor-box">
         <TopBar editorId={id} modelsInfo={modelsInfo}></TopBar>
         <div style={{ height: 'auto' }}>
           <Editor
             editorDidMount={handleEditorDidMount}
             language="typescript"
-            height="75vh"
+            height="90vh"
             // defaultValue="// some comment"
             loading={
               <div
@@ -124,26 +126,60 @@ function App({
             }
           />
         </div>
-        {logVisible && (
-          <div style={{ backgroundColor: '#242424', height: '15vh' }}>
-            {Console && (
-              <Console
-                onSuccess={onSuccess}
-                onFailure={onFailure}
-                editorId={id}
-              ></Console>
+
+        <div
+          //   style={{ backgroundColor: '#242424' }}
+          className={logVisible ? 'console-box' : 'console-box-hidden'}
+        >
+          <ConsoleTab logVisible={logVisible} setlogVisible={setlogVisible} />
+          {Console && (
+            <Console
+              onSuccess={onSuccess}
+              onFailure={onFailure}
+              editorId={id}
+              logVisible={logVisible}
+            ></Console>
+          )}
+        </div>
+
+        <div className="editor-bottom">
+          <div
+            className="console"
+            onClick={() => {
+              setlogVisible(!logVisible);
+            }}
+          >
+            控制台
+            {!logVisible ? (
+              <svg
+                viewBox="0 0 24 24"
+                width="1em"
+                height="1em"
+                className="css-1lc17o4-icon"
+              >
+                <path fill-rule="evenodd" d="M7 10l5 5 5-5z"></path>
+              </svg>
+            ) : (
+              <svg
+                viewBox="0 0 24 24"
+                width="1em"
+                height="1em"
+                className="css-1lc17o4-icon"
+              >
+                <path fill-rule="evenodd" d="M7 14l5-5 5 5z"></path>
+              </svg>
             )}
           </div>
-        )}
-        <Button
-          text="运行"
-          onClick={() => {
-            console.log(1);
-            setlogVisible(true);
-          }}
-        >
-          sss
-        </Button>
+          <Button
+            text="运行"
+            onClick={() => {
+              console.log(1);
+              setlogVisible(true);
+            }}
+          >
+            运行
+          </Button>
+        </div>
       </div>
     </>
   );

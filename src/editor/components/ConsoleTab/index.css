@@ -1,0 +1,53 @@
+
+.console-box-tab{
+    width: 100%;
+    height: 36px;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: space-between;
+    background-color: rgba(240,240,240,1);
+}
+.test{
+    display: flex;
+}
+.console-box-tab-test{
+    overflow: hidden;
+    text-overflow: unset;
+    white-space: pre;
+    position: relative;
+    flex: 0 1 auto;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    color: rgba(140,140,140, 1);
+    cursor: pointer;
+    z-index: 1;
+    height: 36px;
+    font-size: 12px;
+    max-width: 160px;
+}
+.css-l4jzv2-TabHeaderRow {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    color: inherit;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    width: 100%;
+    line-height: 14px;
+    padding: 11px 10px;
+}
+.css-1lc17o4-icon {
+    width: 1em; cursor: pointer;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentcolor;
+    overflow: hidden; padding: 11px 10px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.active{
+    background: rgba(250,250,250, 1);
+    color:rgba(38,38,38, 1); ;
+}
