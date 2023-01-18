@@ -15,9 +15,7 @@ const App = () => {
 * @param {string} t
 * @return {number}
 */
-var numDistinct = function(s, t) {
-return 3
-};`,
+console.log([1,1,1,1])`,
             filename: 'new.ts',
             language: 'typescript',
           },
