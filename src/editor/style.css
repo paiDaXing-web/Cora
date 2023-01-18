@@ -1,0 +1,69 @@
+.editor-bottom{
+    height:55px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 20px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 1;
+    font-size: 13px;
+    background: rgb(250, 250, 250);
+    border-top: 1px solid rgba(240,240,240,1);
+}
+.console{
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 20px;
+    padding: 0;
+    color: rgba(var(--grey-8-rgb),1);
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s;
+    -o-transition: 0.3s all;
+    transition: all 0.3s;
+}
+.css-1lc17o4-icon{
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentcolor;
+    overflow: hidden;
+}
+.console-box{
+    position: absolute;
+    bottom: calc(10vh - 45px);
+    background-color: #fff;
+    width:100%;
+    height: 200px;
+    transition: height 0.1s ease-in;
+    overflow-y:scroll
+}
+.console-box-hidden{
+    position: absolute;
+    bottom: calc(10vh - 45px);
+    width:100%;
+    background-color: #fff;
+    height: 0px;
+    transition: height 0.5s ease-out
+}
+.editor-box{
+    position: relative;
+}
+.log{
+    overflow-y:scroll
+}
