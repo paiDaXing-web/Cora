@@ -26,6 +26,7 @@ import runFile, { runTestFile } from './utils/runFile';
 import Console, { logsType } from './consoleLog';
 import { Button } from './components/Button';
 import './style.css';
+import { ConsoleTab } from './components/ConsoleTab';
 
 type MonacoEditorProps = {
   id: string;
@@ -130,6 +131,7 @@ function App({
           //   style={{ backgroundColor: '#242424' }}
           className={logVisible ? 'console-box' : 'console-box-hidden'}
         >
+          <ConsoleTab logVisible={logVisible} setlogVisible={setlogVisible} />
           {Console && (
             <Console
               onSuccess={onSuccess}

@@ -10,7 +10,14 @@ const App = () => {
         id="10"
         modelsInfo={[
           {
-            value: 'console.log("make a new file")',
+            value: `/**
+* @param {string} s
+* @param {string} t
+* @return {number}
+*/
+var numDistinct = function(s, t) {
+return 3
+};`,
             filename: 'new.ts',
             language: 'typescript',
           },

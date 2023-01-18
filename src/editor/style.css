@@ -54,6 +54,7 @@
     overflow-y:scroll
 }
 .console-box-hidden{
+    overflow: hidden;
     position: absolute;
     bottom: calc(10vh - 45px);
     width:100%;
@@ -66,4 +67,49 @@
 }
 .log{
     overflow-y:scroll
+}
+.console-box-tab{
+    width: 100%;
+    height: 36px;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    background-color: rgba(240,240,240,1);
+}
+.console-box-tab-test{
+    overflow: hidden;
+    text-overflow: unset;
+    white-space: pre;
+    position: relative;
+    flex: 0 1 auto;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    color: rgba(140,140,140, 1);
+    cursor: pointer;
+    z-index: 1;
+    height: 36px;
+    font-size: 12px;
+    max-width: 160px;
+}
+.css-l4jzv2-TabHeaderRow {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    color: inherit;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    width: 100%;
+    line-height: 14px;
+    padding: 11px 10px;
+}
+.css-1lc17o4-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentcolor;
+    overflow: hidden; padding: 11px 10px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
