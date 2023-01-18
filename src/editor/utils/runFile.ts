@@ -60,7 +60,7 @@ export default async function runFile(
                 /import\s+?(?:(?:(?:[\w*\s{},]*)\s+from\s+?)|)(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g,
                 ''
               )
-              .replace(/export\s+{[^}]*}/g,'')
+              .replace(/export\s+{[^}]*}/g, '')
           ) //text array for each model
           .reduce((prevLines, line) => prevLines + line) + '\r\nexport {}'; //Prevents duplicate identifiers by making module;
       //Set runner model value as concatted text
@@ -74,8 +74,10 @@ export default async function runFile(
       ).outputFiles[0].text.replace(/export {};\r\n/, '');
 
       let consoleOverride = `let console = (function (oldCons) {
+       
         return {
           ...oldCons,
+       
           log: function (...args) {
             oldCons.log.apply("lol")
             args.push("${editorId}");
@@ -89,10 +91,19 @@ export default async function runFile(
             args.push("${editorId}");
             oldCons.error.apply(oldCons, args);
           },
+          info:function (...args) {
+            args.push("${editorId}");
+            oldCons.info.apply(oldCons, args);
+          },
         };
-      })(window.console);`;
+      })(window.console); `;
       try {
-        Function(consoleOverride + emittedJS)();
+        Function(
+          consoleOverride +
+            `window["consoleLogTime"]=window.performance.now()` +
+            emittedJS +
+            `console.log(window.performance.now()-window.consoleLogTime)`
+        )();
       } catch (e) {
         //This is to format runtime errors
         if (e.stack) {
