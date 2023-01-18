@@ -44,6 +44,7 @@ function App({
   const [ctrlCounter, setControlCounter] = useState(0);
   const [height, setHeight] = useState(20);
   const [monacoInstance, setMonacoInstance] = useMonaco();
+  const [logVisible, setlogVisible] = useState<boolean>(false);
   const [selectedIdx, setSelectedIdx] = useModelIndex();
   const [models, setModels] = useModels();
   const [ctxEditor, setCtxEditor] = useEditor();
@@ -100,11 +101,11 @@ function App({
     <>
       <div>
         <TopBar editorId={id} modelsInfo={modelsInfo}></TopBar>
-        <div style={{ height:"auto" }}>
+        <div style={{ height: 'auto' }}>
           <Editor
             editorDidMount={handleEditorDidMount}
             language="typescript"
-            height="80vh"
+            height="75vh"
             // defaultValue="// some comment"
             loading={
               <div
@@ -114,8 +115,8 @@ function App({
                   paddingBottom: '10px',
                   width: '100%',
                   textAlign: 'center',
-                  lineHeight:'80vh',
-                  height:'100%'
+                  lineHeight: '80vh',
+                  height: '100%',
                 }}
               >
                 Loading...
@@ -123,18 +124,26 @@ function App({
             }
           />
         </div>
-        <div style={{ backgroundColor: '#242424' ,height:"19vh"}}>
-          {Console && (
-            <Console
-              onSuccess={onSuccess}
-              onFailure={onFailure}
-              editorId={id}
-            ></Console>
-          )}
-        </div>
-        <Button text='运行' onClick={()=>{
-          console.log(1)
-        }}>sss</Button>
+        {logVisible && (
+          <div style={{ backgroundColor: '#242424', height: '15vh' }}>
+            {Console && (
+              <Console
+                onSuccess={onSuccess}
+                onFailure={onFailure}
+                editorId={id}
+              ></Console>
+            )}
+          </div>
+        )}
+        <Button
+          text="运行"
+          onClick={() => {
+            console.log(1);
+            setlogVisible(true);
+          }}
+        >
+          sss
+        </Button>
       </div>
     </>
   );

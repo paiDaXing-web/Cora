@@ -21,7 +21,6 @@ const LogsContainer = ({
         if (log.data?.pop() === editorId) {
           // Problem completion determined by logs. How else?
           let lastItem = log.data?.slice(-1)[0];
-          console.log(log);
           if (lastItem === 'Problem solved') {
             onSuccess?.(count => count + 1);
           }

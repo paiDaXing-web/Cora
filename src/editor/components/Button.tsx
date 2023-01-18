@@ -1,11 +1,15 @@
-import React from "react";
-import "./Button.css"
+import React from 'react';
+import './Button.css';
 
-interface propsTypes{
-    text:string,
-    onClick:()=>void
-    children:string
+interface propsTypes {
+  text: string;
+  onClick: () => void;
+  children: string;
 }
-export const Button=(props:propsTypes)=>{
-    return <button className="btn">{props.children}</button>
-}
+export const Button = (props: propsTypes) => {
+  return (
+    <button className="btn" onClick={props.onClick}>
+      {props.children}
+    </button>
+  );
+};
