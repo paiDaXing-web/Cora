@@ -132,7 +132,7 @@ function App({
           className={logVisible ? 'console-box' : 'console-box-hidden'}
         >
           <ConsoleTab logVisible={logVisible} setlogVisible={setlogVisible} />
-
+          <div></div>
           {Console && (
             <Console
               onSuccess={onSuccess}
@@ -158,7 +158,7 @@ function App({
                 height="1em"
                 className="css-1lc17o4-icon"
               >
-                <path fill-rule="evenodd" d="M7 10l5 5 5-5z"></path>
+                <path fillRule="evenodd" d="M7 10l5 5 5-5z"></path>
               </svg>
             ) : (
               <svg
@@ -167,7 +167,7 @@ function App({
                 height="1em"
                 className="css-1lc17o4-icon"
               >
-                <path fill-rule="evenodd" d="M7 14l5-5 5 5z"></path>
+                <path fillRule="evenodd" d="M7 14l5-5 5 5z"></path>
               </svg>
             )}
           </div>

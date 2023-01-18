@@ -47,12 +47,12 @@ const LogsContainer = ({
       },
       false
     );
+    console.log(logs);
     return () => {
       Unhook(window.console as any);
     };
     //dependencies prevent stale
   }, [editorId, onFailure, onSuccess, setLogs]);
-
   return logVisible ? (
     <div className="log" style={{ backgroundColor: '#242424' }}>
       <Console
