@@ -30,13 +30,7 @@
 
 <br />
 
-## 官方文档 & Demo 演示
 
-> **中文**：[https://100px.net](https://100px.net)
-
-> **English**：**If anyone can help translate the document, please contact me** `ldq404@qq.com`
-
-<br />
 
 ## 🙏🙏🙏 点个 Star
 
