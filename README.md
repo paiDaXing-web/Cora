@@ -1,6 +1,6 @@
 # React Run Code
 
-![](../Web-Run-IDE/1674107163838.png)
+![](./1674107163838.png)
 
 ## Usage
 
