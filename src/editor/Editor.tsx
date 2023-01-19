@@ -5,6 +5,7 @@ import MonacoEditor from './monacoEditor';
 import { EditorProvider, modelsInfoType } from './editorContext';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import { Height } from '@material-ui/icons';
 
 export type editorProps = {
   id: string;
@@ -12,6 +13,8 @@ export type editorProps = {
   onSuccess?: Dispatch<SetStateAction<number>>;
   onFailure?: Function;
   submissionCount?: number;
+  height?: number;
+  language?: string;
 };
 
 export default function Editor({
@@ -20,6 +23,7 @@ export default function Editor({
   onSuccess,
   onFailure,
   submissionCount,
+  height = 300,
 }: editorProps) {
   return (
     <DndProvider backend={HTML5Backend}>
@@ -30,6 +34,7 @@ export default function Editor({
           onFailure={onFailure}
           id={id}
           modelsInfo={modelsInfo}
+          height={height}
         />
       </EditorProvider>
     </DndProvider>
