@@ -102,7 +102,7 @@ export default async function runFile(
           consoleOverride +
             `window["consoleLogTime"]=window.performance.now()` +
             emittedJS +
-            `console.log(window.performance.now()-window.consoleLogTime)`
+            `console.log("runtime:",window.performance.now()-window.consoleLogTime)`
         )();
       } catch (e) {
         //This is to format runtime errors

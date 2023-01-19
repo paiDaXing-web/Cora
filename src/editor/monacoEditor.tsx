@@ -34,6 +34,7 @@ type MonacoEditorProps = {
   submissionCount?: number;
   onSuccess?: Dispatch<SetStateAction<number>>;
   onFailure?: Function;
+  height?: number;
 };
 
 function App({
@@ -42,9 +43,10 @@ function App({
   submissionCount,
   onSuccess,
   onFailure,
+  height,
 }: MonacoEditorProps) {
   const [ctrlCounter, setControlCounter] = useState(0);
-  const [height, setHeight] = useState(20);
+  //   const [height, setHeight] = useState(20);
   const [monacoInstance, setMonacoInstance] = useMonaco();
   const [logVisible, setlogVisible] = useState<boolean>(true);
   const [selectedIdx, setSelectedIdx] = useModelIndex();
@@ -102,13 +104,10 @@ function App({
   return (
     <>
       <div className="editor-box">
-        <TopBar editorId={id} modelsInfo={modelsInfo}></TopBar>
-        <div style={{ height: 'auto' }}>
+        <div className="editor-contant" style={{ height: height }}>
+          <TopBar editorId={id} modelsInfo={modelsInfo}></TopBar>
           <Editor
             editorDidMount={handleEditorDidMount}
-            language="typescript"
-            height="90vh"
-            // defaultValue="// some comment"
             loading={
               <div
                 style={{
@@ -125,22 +124,21 @@ function App({
               </div>
             }
           />
-        </div>
+          <div
+            //   style={{ backgroundColor: '#242424' }}
+            className={logVisible ? 'console-box' : 'console-box-hidden'}
+          >
+            <ConsoleTab logVisible={logVisible} setlogVisible={setlogVisible} />
 
-        <div
-          //   style={{ backgroundColor: '#242424' }}
-          className={logVisible ? 'console-box' : 'console-box-hidden'}
-        >
-          <ConsoleTab logVisible={logVisible} setlogVisible={setlogVisible} />
-          <div></div>
-          {Console && (
-            <Console
-              onSuccess={onSuccess}
-              onFailure={onFailure}
-              editorId={id}
-              logVisible={logVisible}
-            ></Console>
-          )}
+            {Console && (
+              <Console
+                onSuccess={onSuccess}
+                onFailure={onFailure}
+                editorId={id}
+                logVisible={logVisible}
+              ></Console>
+            )}
+          </div>
         </div>
 
         <div className="editor-bottom">

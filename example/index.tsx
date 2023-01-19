@@ -16,10 +16,11 @@ const App = () => {
 * @return {number}
 */
 console.log([1,1,1,1])`,
-            filename: 'new.ts',
-            language: 'typescript',
+            filename: 'new.js',
+            language: 'javascript',
           },
         ]}
+        height={600}
       />
     </div>
   );
