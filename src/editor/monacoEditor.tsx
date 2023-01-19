@@ -48,7 +48,7 @@ function App({
   const [ctrlCounter, setControlCounter] = useState(0);
   //   const [height, setHeight] = useState(20);
   const [monacoInstance, setMonacoInstance] = useMonaco();
-  const [logVisible, setlogVisible] = useState<boolean>(true);
+  const [logVisible, setlogVisible] = useState<boolean>(false);
   const [selectedIdx, setSelectedIdx] = useModelIndex();
   const [models, setModels] = useModels();
   const [ctxEditor, setCtxEditor] = useEditor();
