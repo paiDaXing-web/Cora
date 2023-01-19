@@ -85,11 +85,11 @@ export default function TopBar({ editorId, modelsInfo }: TopBarProps) {
         setSelectedIdx(index);
         ctxEditor?.setModel(newModels[index].model);
       } else {
-        setSelectedIdx(index-1);
+        setSelectedIdx(index - 1);
         ctxEditor?.setModel(newModels[index - 1].model);
       }
     } else {
-      console.error("Cannot delete only model", editorId)
+      console.error('Cannot delete only model', editorId);
     }
   }
   //if model is readonly make editor readonly
@@ -115,7 +115,7 @@ export default function TopBar({ editorId, modelsInfo }: TopBarProps) {
             />
           ))}
       <NewFileButton plusModel={plusModel} />
-      <PlayButton modelsInfo={modelsInfo} editorId={editorId} />
+      <PlayButton modelsInfo={modelsInfo} />
     </div>
   );
 }

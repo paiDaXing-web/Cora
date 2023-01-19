@@ -14,8 +14,8 @@ import { useConsoleMessages } from '../editorContext';
 import { setModelsFromInfo } from '../mountFunctions';
 import './index.css';
 
-type PlayButtonType = { editorId: string; modelsInfo: modelsInfoType };
-export default function PlayButton({ editorId, modelsInfo }: PlayButtonType) {
+type PlayButtonType = { modelsInfo: modelsInfoType };
+export default function PlayButton({ modelsInfo }: PlayButtonType) {
   const [selectedIdx, setSelectedIdx] = useModelIndex();
   const setConsoleMessages = useConsoleMessages()[1];
   const monacoInstance = useMonaco()[0];

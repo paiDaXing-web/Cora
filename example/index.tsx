@@ -1,7 +1,8 @@
 // import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Editor from '../src/index';
+import Editor from '../dist/index';
+import '../dist/cora.cjs.development.css';
 
 const App = () => {
   return (

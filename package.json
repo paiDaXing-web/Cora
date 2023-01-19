@@ -1,7 +1,12 @@
 {
-  "version": "0.2.1",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
+  "keywords": [
+    "code editor",
+    "在线编辑器",
+    "monaco-editor 在线编辑器"
+  ],
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -12,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Open-EdTech/react-run-code"
+    "url": "https://github.com/paiDaXing-web/Cora"
   },
   "scripts": {
     "start": "tsdx watch",
@@ -34,16 +39,16 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "react-run-code",
+  "name": "Cora",
   "author": "Matthew Caseres",
-  "module": "dist/react-run-code.esm.js",
+  "module": "dist/Cora.esm.js",
   "size-limit": [
     {
-      "path": "dist/react-run-code.cjs.production.min.js",
+      "path": "dist/Cora.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/react-run-code.esm.js",
+      "path": "dist/Cora.esm.js",
       "limit": "10 KB"
     }
   ],
