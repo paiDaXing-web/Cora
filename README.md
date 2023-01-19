@@ -1,4 +1,4 @@
-# React Run Code
+# Cora
 
 ![](./333.png)
 
@@ -31,4 +31,4 @@ You can do import and export statements, but they just concatenate files on the 
 
 ![](https://github.com/Open-EdTech/react-run-code/blob/main/.github/duplicateError.gif)
 
-# Web-Run-IDE
+## 使用方法
