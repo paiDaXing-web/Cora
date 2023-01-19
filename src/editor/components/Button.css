@@ -22,3 +22,21 @@
     padding: 6px 8px; 
     
 }
+.css-1lc17o4-icon-svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentcolor;
+    overflow: hidden;  
+    
+    
+}
+span{
+    margin-left: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.e17b2gky1{
+    margin-left: 4px;
+}
