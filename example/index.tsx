@@ -16,8 +16,8 @@ const App = () => {
 * @return {number}
 */
 console.log([1,1,1,1])`,
-            filename: 'new.js',
-            language: 'javascript',
+            filename: 'new.ts',
+            language: 'typescript',
           },
         ]}
         height={600}
