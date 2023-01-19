@@ -1,6 +1,6 @@
 # React Run Code
 
-![](../1111.gif)
+![](https://raw.githubusercontent.com/paiDaXing-web/Web-Run-IDE/main/1111.gif)
 
 ## Usage
 
