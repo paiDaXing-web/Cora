@@ -2,7 +2,6 @@ import React from 'react';
 import './Button.css';
 
 interface propsTypes {
-  text: string;
   onClick: () => void;
   children: string;
 }
@@ -28,7 +27,7 @@ export const Button = (props: propsTypes) => {
           </g>
         </g>
       </svg>
-      <span>{props.children}</span>
+      <span className="btn-text">{props.children}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -38,9 +37,9 @@ export const Button = (props: propsTypes) => {
         className="e17b2gky1 "
       >
         <path
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M16.293 9.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L12 13.586l4.293-4.293z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         ></path>
       </svg>
     </button>

@@ -28,10 +28,8 @@
     vertical-align: middle;
     fill: currentcolor;
     overflow: hidden;  
-    
-    
 }
-span{
+.btn-text{
     margin-left: 4px;
     overflow: hidden;
     text-overflow: ellipsis;
