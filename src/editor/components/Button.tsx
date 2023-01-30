@@ -2,7 +2,6 @@ import React from 'react';
 import './Button.css';
 
 interface propsTypes {
-  text: string;
   onClick: () => void;
   children: string;
 }
@@ -28,7 +27,7 @@ export const Button = (props: propsTypes) => {
           </g>
         </g>
       </svg>
-      <span>{props.children}</span>
+      <span className="btn-text">{props.children}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

@@ -77,7 +77,6 @@ export default async function runFile(
        
         return {
           ...oldCons,
-       
           log: function (...args) {
             oldCons.log.apply("lol")
             args.push("${editorId}");

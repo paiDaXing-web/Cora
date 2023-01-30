@@ -170,7 +170,6 @@ function App({
             )}
           </div>
           <Button
-            text="运行"
             onClick={() => {
               setlogVisible(true);
               runFile(
